@@ -1,0 +1,27 @@
+CREATE TABLE EMP 
+(
+  EMPNO NUMBER(4) NOT NULL 
+, ENAME VARCHAR2(10 BYTE) 
+, JOB VARCHAR2(9 BYTE) 
+, MGR NUMBER 
+, HIREDATE DATE 
+, SAL NUMBER 
+, COMM NUMBER 
+, DEPTNO NUMBER 
+
+ );
+
+CREATE TABLE DEPT 
+(
+  DEPTNO NUMBER NOT NULL primary key
+, DNAME VARCHAR2(14) 
+, LOC VARCHAR2(13) 
+
+);
+CREATE VIEW EMPLIST
+AS SELECT 
+    empno,ename,job,dname
+FROM 
+    emp,dept
+    where 
+    emp.deptno=dept.deptno;
