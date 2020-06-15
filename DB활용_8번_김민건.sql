@@ -8,9 +8,9 @@ CREATE TABLE TEST
 
 desc test;
 
-insert into test VALUES(1, 'Â÷½Â¿ø', 2000);
-insert into test(no, name, sal) VALUES(2, 'À¯ÇØÁø', 2500);
-insert into test(no, name, sal) VALUES(3, '¼ÕÈ£ÁØ', 1500);
+insert into test VALUES(1, 'ì°¨ìŠ¹ì›', 2000);
+insert into test(no, name, sal) VALUES(2, 'ìœ í•´ì§„', 2500);
+insert into test(no, name, sal) VALUES(3, 'ì†í˜¸ì¤€', 1500);
 select * from test;
 update test SET sal=2500 where no=1;
 select * from test where sal < 2000;
