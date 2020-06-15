@@ -1,0 +1,31 @@
+CREATE TABLE TEST 
+(
+  NO NUMBER NOT NULL 
+, NAME VARCHAR2(20) 
+, SAL NUMBER 
+, CONSTRAINT TEST_PK PRIMARY KEY 
+  (
+    NO 
+  )
+  ENABLE 
+);
+
+desc test;
+
+INSERT INTO TEST VALUES(1,'차승원',2000);
+
+INSERT INTO TEST(NO,NAME,SAL) VALUES(2,'유해진',2500);
+INSERT INTO TEST(NO,NAME,SAL) VALUES(3,'손호준',1500);
+
+select * from test;
+
+update test set sal=2500 where no=1;
+
+SELECT * FROM TEST WHERE SAL<2000;
+
+UPDATE TEST SET SAL=3000 WHERE SAL>=2000;
+SELECT * FROM TEST;
+
+delete from test;
+
+commit;
